@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar IMC dos Alunos</title>
+    <link rel="stylesheet" href="/static/styles/estilo.css">
+</head>
+<body>
+    <div class="consultar_imc">
+        <h2>Consultar IMC dos Alunos</h2>
+        <table>
+            <tr>
+                <th>Nome do Aluno</th>
+                <th>Peso (kg)</th>
+                <th>Altura (m)</th>
+                <th>IMC</th>
+                <th>Resultado</th>
+                <th>Ações</th>
+            </tr>
+            {% for aluno in alunos %}
+            <tr>
+                <td>{{ aluno.nome }}</td>
+                <td>{{ aluno.peso }}</td>
+                <td>{{ aluno.altura }}</td>
+                <td>{{ aluno.imc }}</td>
+                <td>{{ aluno.classificar_imc() }}</td>
+                <td>
+                    <form action="/deletar_aluno" method="post" style="display:inline;">
+                        <input type="hidden" name="nome_aluno" value="{{ aluno.nome }}">
+                        <button type="submit">Deletar</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <div style="margin-top: 20px;">
+            <a href="/" class="voltar-botao">Voltar ao Formulário</a>
+        </div>
+    </div>
+</body>
+</html>

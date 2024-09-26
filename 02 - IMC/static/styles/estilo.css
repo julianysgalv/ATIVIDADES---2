@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+:root {
+    --fonte-primaria: "Montserrat", sans-serif;
+    --cor-fundo: #F7F7F7;
+    --cor-borda: #B0B0B0;
+    --cor-foco: #A2A2A2;
+    --cor-botao: lightgray;
+    --cor-botao-hover: rgb(167, 167, 167);
+    --cor-botao-delete: #4d53ff;
+    --cor-botao-delete-hover: #1a31ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    font-family: var(--fonte-primaria);
+}
+
+.calc_imc,
+.consultar_imc {
+    display: grid;
+    grid-template-columns: auto;
+    place-items: center;
+    margin-top: 30px;
+}
+
+.calc_imc_formulario,
+.consultar_imc table {
+    border: 1px solid var(--cor-borda);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.calc_imc_formulario:hover,
+.consultar_imc table:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.calc_imc_formulario h2,
+.consultar_imc h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.calc_imc_formulario label {
+    font-weight: bold;
+    margin: 10px 0 5px;
+    display: block;
+    color: #555;
+}
+
+.calc_imc_formulario input[type="text"],
+.calc_imc_formulario input[type="number"] {
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid var(--cor-borda);
+    margin-bottom: 20px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.calc_imc_formulario input[type="text"]:hover,
+.calc_imc_formulario input[type="number"]:hover {
+    background-color: var(--cor-foco);
+}
+
+.calc_imc_enviar {
+    font-size: 18px;
+    background-color: var(--cor-botao);
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.calc_imc_enviar:hover {
+    background-color: var(--cor-botao-hover);
+    transform: scale(1.05);
+}
+
+.consultar_imc table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.consultar_imc th,
+.consultar_imc td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid var(--cor-borda);
+}
+
+.consultar_imc th {
+    background-color: lightgrey;
+    font-weight: bold;
+    color: #333;
+}
+
+button {
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button[type="submit"] {
+    background-color: var(--cor-botao);
+}
+
+button[type="submit"]:hover {
+    background-color: var(--cor-botao-hover);
+    transform: scale(1.05);
+}
+
+.voltar-botao {
+    display: inline-block;
+    font-size: 18px;
+    background-color: var(--cor-botao);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.voltar-botao:hover {
+    background-color: var(--cor-botao-hover);
+}

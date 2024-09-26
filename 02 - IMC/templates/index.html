@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="/static/styles/estilo.css">
+</head>
+<body>
+    <div class="calc_imc">
+        <form class="calc_imc_formulario" action="/cadastrar_aluno" method="post">
+            <h2>Calculadora de IMC do Aluno</h2>
+            <label for="nome_aluno">Nome do Aluno: </label>
+            <input type="text" name="nome_aluno" id="nome_aluno" required> <br>
+            
+            <label for="peso">Peso (kg): </label>
+            <input type="number" name="peso" id="peso" step="0.01" required> <br>
+
+            <label for="altura">Altura (m): </label>
+            <input type="number" name="altura" id="altura" step="0.01" required> <br>
+
+            <div>
+                <button class="calc_imc_enviar" type="submit">Calcular IMC</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
