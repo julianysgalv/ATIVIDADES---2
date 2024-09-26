@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Notas do Aluno</title>
+    <link rel="stylesheet" href="/static/assets/estilo.css">
+</head>
+<body>
+    <form action="/calcular_media" method="POST">
+        <fieldset>
+            <legend>Registrar Notas</legend>
+            <div>
+                <label>Nome do Aluno:</label>
+                <input type="text" name="nome_aluno" class="aluno" required>
+            </div>
+            <div>
+                <label>Primeira Nota:</label>
+                <input type="number" name="primeira_nota" class="aluno" required>
+            </div>
+            <div>
+                <label>Segunda Nota:</label>
+                <input type="number" name="segunda_nota" class="aluno" required>
+            </div>
+            <div>
+                <label>Terceira Nota:</label>
+                <input type="number" name="terceira_nota" class="aluno" required>
+            </div>
+            <button type="submit">Calcular Média</button>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Notas dos Alunos</title>
+    <link rel="stylesheet" href="/static/assets/estilo.css">
+</head>
+<body>
+    <div class="consultar_notas">
+        <h2>Consultar Notas dos Alunos</h2>
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+                <th>Nota 3</th>
+                <th>Média</th>
+            </tr>
+            {% for aluno in alunos %}
+            <tr>
+                <td>{{ aluno.nome }}</td>
+                <td>{{ aluno.notas[0] }}</td>
+                <td>{{ aluno.notas[1] }}</td>
+                <td>{{ aluno.notas[2] }}</td>
+                <td>{{ aluno.media }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
